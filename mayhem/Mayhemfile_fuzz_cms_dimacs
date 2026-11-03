@@ -1,0 +1,9 @@
+project: savantenvs/cryptominisat
+target: fuzz_cms_dimacs
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cms_dimacs/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cms_dimacs
+    libfuzzer: true
+    timeout: 10
